@@ -2,11 +2,23 @@
 
 Example usage:
     $ python nn_train_test.py 
-        --test_features ../data/forecasting_data_test.pkl 
-        --train_features ../data/forecasting_data_train.pkl 
-        --val_features ../data/forecasting_data_val.pkl ../../data/ 
+        --test_features features/train.pkl
+        --train_features features/val.pkl 
+        --val_features features/test.pkl features
         --use_map --use_delta --n_neigh 3 
         --traj_save_path forecasted_trajectories/nn_none.pkl
+
+    $ python nn_train_test.py 
+        --test_features features/train.pkl
+        --train_features features/val.pkl 
+        --val_features features/test.pkl
+        --normalize --use_delta 
+        --obs_len 20 
+        --pred_len 30 
+        --n_neigh 9 
+        --model_path model/lstm_none.pkl
+        --traj_save_path traj/lstm_none.pkl
+
 """
 
 import argparse

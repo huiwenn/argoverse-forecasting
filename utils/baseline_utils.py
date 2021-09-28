@@ -745,3 +745,4 @@ def validate_args(args: Any) -> bool:
         print("[ARGS ERROR]: pred_len cannot be more than 30.")
         success = False
     return success
+
